@@ -1,12 +1,7 @@
-# THz AI Processing API
+# 두유 Package Inspection System
 
-테라헤르츠(THz) 이미지 및 신호 처리를 위한 FastAPI 기반 백엔드 서버입니다.
+수정된 두유 패키징을 수정 전 이미지와 수정 후 이미지를 비교함
 
-## 기능
-
-- 이미지 디블러링 (Image Deblurring)
-- 이미지 디노이징 (Image Denoising)
-- 신호 디노이징 (Signal Denoising)
 
 ## 설치 및 실행
 
@@ -28,13 +23,6 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-### 모델 파일 준비
-
-ONNX 모델 파일을 `models` 디렉토리에 복사합니다:
-
-- `models/model_deblur.onnx`: 이미지 디블러링 모델
-- `models/image.onnx`: 이미지 디노이징 모델
-- `models/signal.onnx`: 신호 디노이징 모델
 
 ### 실행
 
@@ -51,20 +39,7 @@ python run.py
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
-## API 엔드포인트
 
-### 이미지 디블러링
-
-- `POST /api/deblur/process`: 이미지 디블러링 처리
-
-### 이미지 디노이징
-
-- `POST /api/denoise/process`: 이미지 디노이징 처리
-
-### 신호 디노이징
-
-- `POST /api/signal/process`: 신호 디노이징 처리
-- `GET /api/signal/sample`: 샘플 신호 처리
 
 ## 사용 예시
 
